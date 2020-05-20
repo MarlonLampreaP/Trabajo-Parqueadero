@@ -10,8 +10,8 @@
       &copy;
       <script>
         document.write(new Date().getFullYear())
-      </script>, Hecho por mi <i class="material-icons">favorite</i> by
-      <a href="https://www.ucc.edu.co" target="_blank"></a>
+      </script>,<i class="material-icons"></i>
+      <a href="https://www.ucc.edu.co" target="_blank">Hecho Por</a> Marlon Lamprea Paez - ING. de sistemas
     </div>
   </div>
 </footer>

@@ -43,7 +43,7 @@ class ParqueaderoController extends Controller
         App\Parqueadero::create($request->all());      
         
         return redirect()->route('parqueadero.index')
-        ->with('exito', 'Parqueadero creado con exito');
+        ->with('exito', 'Cupo creado con exito');
     }
 
     /**
@@ -89,7 +89,7 @@ class ParqueaderoController extends Controller
         $parqueaderos->update($request->all());
 
         return redirect()->route('parqueadero.index')
-                ->with('exito', 'se modifico el parqueadero con exito');
+                ->with('exito', 'se modifico el cupo con exito');
     }
 
     /**
@@ -105,6 +105,6 @@ class ParqueaderoController extends Controller
         $parqueaderos->delete();
 
         return redirect()->route('parqueadero.index')
-                ->with('exito', 'se elimino el parqueadero con exito');
+                ->with('exito', 'se elimino el cupo con exito');
     }
 }

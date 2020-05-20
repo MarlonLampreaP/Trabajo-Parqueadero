@@ -1,10 +1,7 @@
-@extends('layouts.app', ['activePage' => 'dashboard', 'titlePage' => __('Dashboard')])
+@extends('layouts.app', ['activePage' => '', 'titlePage' => __('')])
 
-@section('content')
-  <div class="content">
-    <div class="container-fluid">
-    </div>
-  </div>
+@section('content')  
+      <i><img style="width:100%" src="{{ asset('material') }}/img/cover.jpg"></i>
 @endsection
 
 @push('js')
