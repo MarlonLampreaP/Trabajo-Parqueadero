@@ -1,10 +1,10 @@
-@extends('layouts.app', ['class' => 'off-canvas-sidebar', 'activePage' => 'login', 'title' => __('Material Dashboard')])
+@extends('layouts.app', ['class' => 'off-canvas-sidebar', 'activePage' => 'login', 'title' => __('')])
 
 @section('content')
 <div class="container" style="height: auto;">
   <div class="row align-items-center">
     <div class="col-md-9 ml-auto mr-auto mb-3 text-center">
-      <h3>{{ __('Log in to see how you can speed up your web development with out of the box CRUD for #User Management and more.') }} </h3>
+      <h3>{{ __('Por favor digite los datos requeridos para iniciar sesion.') }} </h3>
     </div>
     <div class="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
       <form class="form" method="POST" action="{{ route('login') }}">
@@ -26,7 +26,7 @@
             </div>
           </div>
           <div class="card-body">
-            <p class="card-description text-center">{{ __('Or Sign in with ') }} <strong>admin@material.com</strong> {{ __(' and the password ') }}<strong>secret</strong> </p>
+            <p class="card-description text-center">{{ __('Para Iniciar sesion como admin da le a "LOGEARSE" si deseas usar el invitado usa estos datos ') }} <strong>invitado@hotmail.com</strong> {{ __(' Y La contraseña: ') }}<strong>12345678</strong> </p>
             <div class="bmd-form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
               <div class="input-group">
                 <div class="input-group-prepend">
@@ -34,7 +34,7 @@
                     <i class="material-icons">email</i>
                   </span>
                 </div>
-                <input type="email" name="email" class="form-control" placeholder="{{ __('Email...') }}" value="{{ old('email', 'admin@material.com') }}" required>
+                <input type="email" name="email" class="form-control" placeholder="{{ __('Correo...') }}" value="{{ old('email', 'admin@material.com') }}" required>
               </div>
               @if ($errors->has('email'))
                 <div id="email-error" class="error text-danger pl-3" for="email" style="display: block;">
@@ -49,7 +49,7 @@
                     <i class="material-icons">lock_outline</i>
                   </span>
                 </div>
-                <input type="password" name="password" id="password" class="form-control" placeholder="{{ __('Password...') }}" value="{{ !$errors->has('password') ? "secret" : "" }}" required>
+                <input type="password" name="password" id="password" class="form-control" placeholder="{{ __('Contraseña...') }}" value="{{ !$errors->has('password') ? "secret" : "" }}" required>
               </div>
               @if ($errors->has('password'))
                 <div id="password-error" class="error text-danger pl-3" for="password" style="display: block;">
@@ -59,7 +59,7 @@
             </div>
             <div class="form-check mr-auto ml-3 mt-3">
               <label class="form-check-label">
-                <input class="form-check-input" type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Remember me') }}
+                <input class="form-check-input" type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Recuerda Me') }}
                 <span class="form-check-sign">
                   <span class="check"></span>
                 </span>
@@ -67,7 +67,7 @@
             </div>
           </div>
           <div class="card-footer justify-content-center">
-            <button type="submit" class="btn btn-primary btn-link btn-lg">{{ __('Lets Go') }}</button>
+            <button type="submit" class="btn btn-primary btn-link btn-lg">{{ __('Logearse') }}</button>
           </div>
         </div>
       </form>
@@ -75,13 +75,13 @@
         <div class="col-6">
             @if (Route::has('password.request'))
                 <a href="{{ route('password.request') }}" class="text-light">
-                    <small>{{ __('Forgot password?') }}</small>
+                    <small>{{ __('Olvido su contraseña?') }}</small>
                 </a>
             @endif
         </div>
         <div class="col-6 text-right">
             <a href="{{ route('register') }}" class="text-light">
-                <small>{{ __('Create new account') }}</small>
+                <small>{{ __('Crea un nuevo usuario') }}</small>
             </a>
         </div>
       </div>
