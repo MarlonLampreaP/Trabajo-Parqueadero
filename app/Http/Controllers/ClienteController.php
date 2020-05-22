@@ -40,9 +40,7 @@ class ClienteController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'idparqueadero' => 'required',
-            'nombre' => 'required',
-            'telefono' => 'required'
+            
         ]);
 
         App\Cliente::create($request->all());      
@@ -91,9 +89,7 @@ class ClienteController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'idparqueadero' => 'required',
-            'nombre' => 'required',
-            'telefono' => 'required'
+            
         ]);
 
         $clientes = App\Cliente::findorfail($id);
@@ -120,4 +116,18 @@ class ClienteController extends Controller
         return redirect()->route('cliente.index')
                 ->with('exito', 'se elimino el cliente con exito');
     }
-}
+
+    public function darClientes()
+    {
+
+    $clientes = App\Cliente::orderBy('nombre','asc')->get();
+
+    return response()->json($clientes);
+
+    }
+
+    public function guardarCliente( Request $request)
+    {
+        return App\Cliente::create($request->all());
+    }
+}   
